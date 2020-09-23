@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout2</title>
+    <style>
+        main > * {
+            background-color: silver;
+        }
+        main {
+            width: 960px;
+            min-height: 1000px;
+            margin: 20px auto 0 auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 80px 80px 80px 500px 40px;
+        }
+        header      {grid-column: 1/2;grid-row: 1/2;}
+        nav         {grid-column: 3/5;grid-row: 1/2; height: 50px;
+                    display: flex;align-self: center; justify-content: space-evenly;align-items: center; }
+        .prod       {grid-column: 1/5;grid-row: 4/5; display: grid; grid-gap: 10px;
+                    grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr 1fr 1fr;
+                    background-color: white;}
+        .prod > div {padding: 10px; background-color: silver; }
+        .sec1       {grid-column: 1/5;grid-row: 2/3;background-color: white;font-weight: bold;font-size: 30px;}
+        .sec2       {grid-column: 1/5;grid-row: 3/3;background-color: white;font-weight: bold;font-size: 20px;}
+        footer      {grid-column: 1/5;grid-row: 5/6;display:flex;align-items:center;justify-content: center;}
+    </style>
+</head>
+<body>
+    <main>
+        <header>company logo</header>
+        <nav>
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+        </nav>
+        <section class="prod">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <section class="sec1">Product 1</section>
+        <section class="sec2">Product 2</section>
+        <footer><div>Copyright Notice</div></footer>
+    </main>
+</body>
+</html>
